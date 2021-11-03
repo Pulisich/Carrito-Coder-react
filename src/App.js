@@ -1,10 +1,12 @@
 import './App.css';
-import  ButtonAppBar from './components/navbar/navbar';
+import  NavBar from './components/navbar/navbar';
 import TitleComponent from './components/title/title'
+import ItemListContainer from './components/ItemListContainer/itemListContainer';
 function App() {
   return (
     <div className="App">
-    <ButtonAppBar/>  
+    <NavBar/>  
+    <ItemListContainer/>
     <TitleComponent/>
     </div>
   );

@@ -4,17 +4,34 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import CartWidjet from '../cartWidjet/cartWidjet';
 
-export default function ButtonAppBar() {
+export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
+        
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+
+         <Button color="inherit">
+           
+           <CartWidjet/>
+           
+          </Button> 
+          
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          
             CityPhone
+          
           </Typography>
+          {/* <select name="Productos">
+            <option>Fundas</option>
+            <option>Fundas</option>
+            <option>Fundas</option>
+            <option>Fundas</option>
+            <option>Fundas</option>
+            <option>Fundas</option>
+          </select> */}
           <Button color="inherit">Fundas</Button>
           <Button color="inherit">Vidrios templados</Button>
           <Button color="inherit">Cargadores</Button>
