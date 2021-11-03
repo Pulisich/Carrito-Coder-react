@@ -2,7 +2,7 @@ const ItemListContainer = (greeting)=>{
 
     return (
 
-        <div>{greeting="Buenas"}</div>
+        <div><h1>{greeting="City Phone"}</h1></div>
 
     )
 
