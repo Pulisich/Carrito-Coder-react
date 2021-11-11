@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
     <NavBar/>  
-    <ItemListContainer/>
     <TitleComponent/>
+    <ItemListContainer/>
     </div>
   );
 }
