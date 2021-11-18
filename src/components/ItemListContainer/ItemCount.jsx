@@ -32,7 +32,7 @@ const ItemCount =({stock, initial})=>{
     const onAdd =()=>{
         const message1 = `${contador} funda agregada al carro`;
         const message2 = `${contador} fundas agregadas al carro`;
-        if (contador == 1){
+        if (contador === 1){
             alert(message1);
         } else {
             alert(message2);
