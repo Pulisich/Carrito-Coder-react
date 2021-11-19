@@ -41,7 +41,6 @@ const ItemCount =({stock, initial})=>{
     return(
 
         <div>
-            <h1>Funda Samsung A58 $800</h1>
             
             <div>
 
