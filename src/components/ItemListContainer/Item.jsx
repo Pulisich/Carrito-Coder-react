@@ -2,7 +2,7 @@ import { Fragment } from "react"
 
 
 
-const Item = (product) =>{
+const Item = ({product}) =>{
     console.log("Item: ", product)
 
     return(
