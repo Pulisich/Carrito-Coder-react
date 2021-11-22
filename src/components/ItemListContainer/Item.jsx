@@ -1,13 +1,17 @@
 import { Fragment } from "react"
-import ItemCount from "./ItemCount"
 
-const Item = (props) =>{
-    console.log(props)
+
+
+const Item = (product) =>{
+    console.log("Item: ", product)
 
     return(
         <Fragment>
-            <h1>Funda Samsung A58</h1>
-            <ItemCount stock= {10} initial={1}></ItemCount>
+            <h1>{product.id}</h1>
+            <h2>{product.name}</h2>
+            <h3>{product.price}</h3>
+            <h3>{product.category}</h3>
+            <h3>{product.stock}</h3>
         </Fragment>
         
     )

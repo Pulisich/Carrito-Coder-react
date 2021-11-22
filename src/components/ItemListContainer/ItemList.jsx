@@ -6,8 +6,12 @@ const ItemList = ({products}) =>{
 
     return (
         <div>
-          <h3>Funda</h3>
-            <Item></Item>
+          {products.map((prod)=>
+          
+          <Item  key={prod.id}  product={prod} />)
+         
+          }
+            
         </div>
     )
 
