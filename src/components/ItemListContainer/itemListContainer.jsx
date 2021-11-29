@@ -2,8 +2,8 @@ import { useState, useEffect } from "react"
 import getProducts from "../../services/promise"
 import ItemList from "./ItemList"
 
-
 const ItemListContainer = (greeting)=>{
+
 
     const [products, setProductos]= useState([])
 
@@ -17,8 +17,6 @@ const ItemListContainer = (greeting)=>{
     }    , []) //[Acá van las dependencias que el useEffect mira para ver si se actualiza]
 
     
-
-
 
     return (
 

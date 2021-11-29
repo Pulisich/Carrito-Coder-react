@@ -29,3 +29,13 @@ code {
 .productos h3{
   font-size: 15px;
 }
+
+.Items{
+  border: 25px;
+  border-color: blue;
+}
+
+.Items :hover{
+  width: 125%;
+  height: auto;
+}

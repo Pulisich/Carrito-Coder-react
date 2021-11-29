@@ -12,7 +12,7 @@ const ItemCount =({stock, initial})=>{
  //Hook para el contador
 
     const [contador, setContador] = useState(initial);
-
+//En contador se guarda el valor de la variable que vamos a ir modificando con setContador, useState determina su valor original.
     const addItem = ()=>{
         const newValue = contador + 1;
        

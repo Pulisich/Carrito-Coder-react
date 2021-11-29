@@ -1,5 +1,4 @@
-import { Fragment } from "react"
-
+import {Link} from 'react-router-dom';
 
 
 const Item = ({product}) =>{
@@ -8,29 +7,28 @@ const Item = ({product}) =>{
     
 
     return(
-        <Fragment>
        
-           
+            <Link to={`/item/${product.id}`}>
             
-            <div>
-                
-                <h1>{product.id}</h1>
+                <div className="Items">
                     
-                <h2>{product.name}</h2>
+                    <h1>{product.id}</h1>
+                        
+                    <h2>{product.name}</h2>
+                        
+                    <img src={product.img} alt="" srcset="" />
                     
-                <img src={product.img} alt="" srcset="" />
-                
-                <h3>{product.price}</h3>
-       
-                <h3>{product.category}</h3>
-       
-                <h3>{product.stock}</h3>
+                    <h3>{product.price}</h3>
         
-            </div>
+                    <h3>{product.category}</h3>
         
+                    <h3>{product.stock}</h3>
+            
+                </div>
+            
+            </Link>
            
        
-        </Fragment>
         
     )
 }
