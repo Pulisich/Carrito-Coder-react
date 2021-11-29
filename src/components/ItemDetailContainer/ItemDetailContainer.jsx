@@ -6,7 +6,7 @@ import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = ()=>{
 
-    const [item, setItem]= useState({}) //eso se pone cuando recibís datos de fuera
+    const [item, setItem]= useState({}); //eso se pone cuando recibís datos de fuera
 
     console.log ("Item: ", item);
     console.log(useParams);
@@ -30,7 +30,8 @@ const ItemDetailContainer = ()=>{
     return (
 
         <div>
-      
+            
+            <h1></h1>
             <ItemDetail item={item}/>
 
         </div>
