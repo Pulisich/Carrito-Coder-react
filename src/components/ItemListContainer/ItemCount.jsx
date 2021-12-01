@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const ItemCount =({stock}, {initial})=>{
+const ItemCount =({stock, initial})=>{
     
     console.log("Stock=" , stock)
     
@@ -14,7 +14,7 @@ const ItemCount =({stock}, {initial})=>{
     const [contador, setContador] = useState(initial);
 //En contador se guarda el valor de la variable que vamos a ir modificando con setContador, useState determina su valor original.
     const addItem = ()=>{
-        const newValue = contador + 1;
+        const newValue = setContador(contador +1);
        
         if (newValue < {stock}){
             setContador(newValue)
@@ -22,7 +22,7 @@ const ItemCount =({stock}, {initial})=>{
     }
 
     const quitItem =()=>{
-        const newValue = contador -1
+        const newValue = setContador(contador -1)
         if( newValue < initial){
             setContador(initial)
         }
