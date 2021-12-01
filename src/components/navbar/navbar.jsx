@@ -5,6 +5,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CartWidjet from '../cartWidjet/cartWidjet';
+import {Link} from 'react-router-dom';
+import ItemListContainer from '../ItemListContainer/itemListContainer'
+
 
 export default function NavBar() {
   return (
@@ -19,7 +22,7 @@ export default function NavBar() {
            
           </Button> 
           
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} className="title">
           
             CityPhone
           
@@ -32,6 +35,7 @@ export default function NavBar() {
             <option>Fundas</option>
             <option>Fundas</option>
           </select> */}
+          <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>HOME</Link> </Button>
           <Button color="inherit">Fundas</Button>
           <Button color="inherit">Vidrios templados</Button>
           <Button color="inherit">Cargadores</Button>

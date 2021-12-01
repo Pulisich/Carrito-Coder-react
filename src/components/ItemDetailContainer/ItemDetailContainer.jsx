@@ -31,7 +31,7 @@ const ItemDetailContainer = ()=>{
 
         <div>
             
-            <h1></h1>
+            <h1>El Item Detail Container</h1>
             <ItemDetail item={item}/>
 
         </div>

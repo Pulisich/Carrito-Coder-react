@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const ItemCount =({stock, initial})=>{
+const ItemCount =({stock}, {initial})=>{
     
     console.log("Stock=" , stock)
     
@@ -16,7 +16,7 @@ const ItemCount =({stock, initial})=>{
     const addItem = ()=>{
         const newValue = contador + 1;
        
-        if (newValue < stock){
+        if (newValue < {stock}){
             setContador(newValue)
         }
     }
@@ -30,8 +30,8 @@ const ItemCount =({stock, initial})=>{
     }
 
     const onAdd =()=>{
-        const message1 = `${contador} funda agregada al carro`;
-        const message2 = `${contador} fundas agregadas al carro`;
+        const message1 = `${contador} producto agregado carro`;
+        const message2 = `${contador}  productos agregados al carro`;
         if (contador === 1){
             alert(message1);
         } else {
@@ -43,11 +43,13 @@ const ItemCount =({stock, initial})=>{
         <div>
             
             <div>
-
-                <button onClick={quitItem}>-</button>
+                <button onClick={addItem} className="botonesCarro">+</button>
+                
+                <button onClick={quitItem} className="botonesCarro">-</button>
+                
                 <h3>{contador}</h3>
-                <button onClick={addItem}>+</button>
-                <button onClick={onAdd}>Agregar</button>
+
+                <button onClick={onAdd} className="botonesCarro">Agregar al carro</button>
             </div>
 
         </div>

@@ -38,4 +38,10 @@ code {
 .Items :hover{
   width: 125%;
   height: auto;
+  animation-duration: 2000s;
 }
+
+.title {
+  color: yellow;
+}
+
