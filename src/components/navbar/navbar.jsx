@@ -36,11 +36,11 @@ export default function NavBar() {
             <option>Fundas</option>
           </select> */}
           <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>HOME</Link> </Button>
-          <Button color="inherit">Fundas</Button>
-          <Button color="inherit">Vidrios templados</Button>
-          <Button color="inherit">Cargadores</Button>
-          <Button color="inherit">Auriculares</Button>
-          <Button color="inherit">Accesorios</Button>
+          <Button color="inherit"><Link to={`/product?category=Fundas`}>Fundas</Link></Button>
+          <Button color="inherit"><Link to={`/item/category/templados`}>Templados</Link></Button>
+          <Button color="inherit"><Link to={`/item/category/cargadores`}>Cargadores</Link></Button>
+          <Button color="inherit"><Link to={`/item/category/auriculares`}>Auriculares</Link></Button>
+          <Button color="inherit"><Link to={`/item/category/accesorios`}>Accesorios</Link></Button>
         </Toolbar>
       </AppBar>
     </Box>

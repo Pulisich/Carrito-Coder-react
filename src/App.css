@@ -45,3 +45,12 @@ a{
   background-color: rgb(52, 72, 180);
   color: whitesmoke;
 }
+
+Link{
+  text-decoration: none;
+  
+}
+
+Link :visited{
+  text-decoration: none;
+}
