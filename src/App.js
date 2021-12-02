@@ -19,7 +19,14 @@ function App() {
       <Routes>
 
         <Route path="/" element={<ItemListContainer/>} />
-        <Route path="item/:id" element={<ItemDetailContainer/>}/>          
+        <Route path="item/:id" element={<ItemDetailContainer/>}/>       
+        <Route path= "item/:category=/Fundas" element={<ItemListContainer/>}/>
+        <Route path= "item/:category=/Cargadores" element={<ItemListContainer/>}/>   
+        <Route path= "item/:category=/Templados" element={<ItemListContainer/>}/>   
+        <Route path= "item/:category=/Accesorios" element={<ItemListContainer/>}/>  
+        <Route path= "item/:category=/Auriculares" element={<ItemListContainer/>}/>   
+ 
+   
       
       </Routes>
 
