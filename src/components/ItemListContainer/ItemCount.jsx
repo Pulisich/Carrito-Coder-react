@@ -13,21 +13,29 @@ const ItemCount =({stock, initial})=>{
 
     const [contador, setContador] = useState(initial);
 //En contador se guarda el valor de la variable que vamos a ir modificando con setContador, useState determina su valor original.
-    const addItem = ()=>{
-        const newValue = setContador(contador +1);
+   
+
+const addItem = () => {
+    const newValue = contador + 1;
        
-        if (newValue < {stock}){
-            setContador(newValue)
-        }
+    if (newValue < stock){
+        setContador(newValue)
+    } else if (newValue > stock) {
+        alert("Stock is full");
+        setContador(stock)
+    }
+}
+
+const quitItem = () => {
+    const newValue = contador -1
+    if (newValue < initial){
+        setContador(initial)
     }
 
-    const quitItem =()=>{
-        const newValue = setContador(contador -1)
-        if( newValue < initial){
-            setContador(initial)
-        }
+}
 
-    }
+
+
 
     const onAdd =()=>{
         const message1 = `${contador} producto agregado carro`;
