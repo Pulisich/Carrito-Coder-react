@@ -15,7 +15,7 @@ const ItemListContainer = ()=>{
 
    
     useEffect(() => {
-        if (products.length === 0) {
+       
             getProducts
                 .then(res => {
                     setProducts(res)
@@ -26,7 +26,7 @@ const ItemListContainer = ()=>{
                 }).catch(err => alert("El problema es: ", err))
             console.log("Todo cargado")
         }
-    }, []) //[Acá van las dependencias que el useEffect mira para ver si se actualiza]
+    , [category]) //[Acá van las dependencias que el useEffect mira para ver si se actualiza]
     
     console.log("Filtrados", products)
  
