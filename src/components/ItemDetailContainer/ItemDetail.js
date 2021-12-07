@@ -4,7 +4,7 @@ import ItemListContainer from '../ItemListContainer/itemListContainer';
 import {Link} from 'react-router-dom'
 
 const ItemDetail = (props) =>{
-    const{ name, price, img, category, stock, description} =props.item;
+    const{ name, price, img, category, stock, description} = props.item;
 
     return(
         <Fragment>

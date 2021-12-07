@@ -19,7 +19,7 @@ const ItemDetailContainer = ()=>{
 
 
     useEffect(()=>{
-        getProducts
+        getProducts    
         .then(res =>{
             setItem(res.find((product)=> product.id === parseInt(id)))
         }).catch(err => alert("El problema es: ", err))
@@ -30,7 +30,6 @@ const ItemDetailContainer = ()=>{
     return (
 
         <div>
-            
             
             <ItemDetail item={item}/>
 

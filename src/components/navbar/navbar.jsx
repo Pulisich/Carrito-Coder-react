@@ -8,7 +8,6 @@ import CartWidjet from '../cartWidjet/cartWidjet';
 import {Link} from 'react-router-dom';
 import ItemListContainer from '../ItemListContainer/itemListContainer'
 
-
 export default function NavBar() {
   
   return (
@@ -37,11 +36,11 @@ export default function NavBar() {
             <option>Fundas</option>
           </select> */}
           <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>HOME</Link> </Button>
-          <Button color="inherit"><Link to={`item/:category=/Fundas`}>Fundas</Link></Button>
-          <Button color="inherit"><Link to={`/item/:category=/Templados`}>Templados</Link></Button>
-          <Button color="inherit"><Link to={`/item/:category=/Cargadores`}>Cargadores</Link></Button>
-          <Button color="inherit"><Link to={`/item/category=/Auriculares`}>Auriculares</Link></Button>
-          <Button color="inherit"><Link to={`/item/category=/Accesorios`}>Accesorios</Link></Button>
+          <Button color="inherit"><Link to={`/category/Fundas`}>Fundas</Link></Button>
+          <Button color="inherit"><Link to={`/category/Templados`}>Templados</Link></Button>
+          <Button color="inherit"><Link to={`/category/Cargadores`}>Cargadores</Link></Button>
+          <Button color="inherit"><Link to={`/category/Auriculares`}>Auriculares</Link></Button>
+          <Button color="inherit"><Link to={`/category/Accesorios`}>Accesorios</Link></Button>
         </Toolbar>
       </AppBar>
     </Box>

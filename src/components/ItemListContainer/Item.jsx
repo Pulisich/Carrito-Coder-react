@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 
 
 const Item = ({product}) =>{
-    console.log("Item: ", product)
+    // console.log("Item: ", product)
 
     
 

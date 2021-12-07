@@ -125,7 +125,7 @@ const getProducts = new Promise((resolve , reject)=>{
         resolve(data);
     reject('Ooops! ¡Algo salió mal!');
         
-    }, 2000);
+    }, 1000);
     
 });
 
