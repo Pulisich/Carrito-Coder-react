@@ -8,11 +8,8 @@ const ItemListContainer = ()=>{
 
     const [products, setProducts]= useState([]);
     const {category} = useParams();
-   
-    console.log ("Productos en el hook son: " , category);
-
-
-
+    //Categoría será igual al parámetro que se le pase  por el Router, como es :category, será igual a lo que digan las rutas de navbar.jsx
+    //Si en navbar.jsx le pongo /category/Fundas, category va a ser igual a fundas.
    
     useEffect(() => {
        
@@ -26,9 +23,12 @@ const ItemListContainer = ()=>{
                 }).catch(err => alert("El problema es: ", err))
             console.log("Todo cargado")
         }
-    , [category]) //[Acá van las dependencias que el useEffect mira para ver si se actualiza]
+    , [category]) 
     
-    console.log("Filtrados", products)
+    //Con ésto le digo que, al obtener los productos, si la categoría no está definida en los parámetros de useParams en App.js, 
+    //me muestre todos, caso contrario que filtre por categoría.
+    
+   
  
     return (
 

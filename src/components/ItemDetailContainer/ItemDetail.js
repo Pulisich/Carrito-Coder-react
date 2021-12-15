@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom'
 
 const ItemDetail = (props) =>{
     const{ name, price, img, category, stock, description} = props.item;
+    //ItemDetail recibe por props todo lo relativo a los items del array que después lo uso para renderizar.
+
 
     return(
         <Fragment>

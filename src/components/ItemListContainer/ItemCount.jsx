@@ -2,9 +2,9 @@ import { useState } from "react"
 
 const ItemCount =({stock, initial})=>{
     
-    console.log("Stock=" , stock)
+    // console.log("Stock=" , stock)
     
-    console.log("Inicial=" , initial)
+    // console.log("Inicial=" , initial)
 
  //La suma debe ser siempre menor o igual que el stock
  //La resta no puede ser menor que initial que es 1
