@@ -1,4 +1,4 @@
-import { React,useState, createContext, useContext } from "react";
+import { React,useState, createContext } from "react";
 
 export const CartContext = createContext([]);
 
@@ -17,11 +17,12 @@ export function CartContextProvider({ children }) {
     const isInCart = (id) => {
     };
 
-    const addItem = (id, item, quantity) => {
+    const addItem = (item, quantity) => {
 
-        isInCart(id) ?
-            null
-            :
+        // isInCart(id) ?
+        //     null
+        //     :
+        alert("Se agrego un producto al carro");
             setItems([...item, { ...item, quantity: quantity }]);
     };
 

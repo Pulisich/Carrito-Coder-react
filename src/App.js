@@ -1,10 +1,12 @@
 import './App.css';
 import  NavBar from './components/navbar/navbar';
-import TitleComponent from './components/title/title'
 import ItemListContainer from './components/ItemListContainer/itemListContainer';
 import {Route, Routes} from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContextProvider } from './contexts/CartContext';
+import Cart from './components/Cart/Cart';
+import Home from './Home';
+
 function App() {
 
   return (
@@ -15,7 +17,6 @@ function App() {
       
         <NavBar />
 
-        <TitleComponent />
 
         <Routes>
 
@@ -26,6 +27,9 @@ function App() {
          como cada item en el array tiene un parámetro distinto podemos
           usar dichos parámetros para filtrarlos combinando useParams con filter.
           Por ejemplo, si el item tiene de id: 4, el link item/4 me llevará al detail con ese item */}
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/home" element={<Home/>} />
+
 
 
 

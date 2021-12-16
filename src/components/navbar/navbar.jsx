@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import CartWidjet from '../cartWidjet/cartWidjet';
 import {Link} from 'react-router-dom';
 import ItemListContainer from '../ItemListContainer/itemListContainer'
+import Cart from '../Cart/Cart';
+import Home from '../../Home';
 
 export default function NavBar() {
   
@@ -17,8 +19,13 @@ export default function NavBar() {
         <Toolbar>
 
          <Button color="inherit">
-           
+         
+         <Link to="/cart" element={<Cart/>}>
+         
            <CartWidjet/>
+            
+          </Link>
+          
            
           </Button> 
           
@@ -35,7 +42,8 @@ export default function NavBar() {
             <option>Fundas</option>
             <option>Fundas</option>
           </select> */}
-          <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>HOME</Link> </Button>
+          <Button color="inherit"><Link to="/home" element={<Home/>}>Home</Link> </Button>
+          <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>Productos</Link> </Button>
           <Button color="inherit"><Link to={`/category/Fundas`}>Fundas</Link></Button>
           <Button color="inherit"><Link to={`/category/Templados`}>Templados</Link></Button>
           <Button color="inherit"><Link to={`/category/Cargadores`}>Cargadores</Link></Button>

@@ -1,21 +1,19 @@
 import { useState } from "react"
 
-const ItemCount =({stock, initial})=>{
-    
-    // console.log("Stock=" , stock)
-    
-    // console.log("Inicial=" , initial)
 
+const ItemCount =({item, stock, initial})=>{
+    
  //La suma debe ser siempre menor o igual que el stock
  //La resta no puede ser menor que initial que es 1
 
- //Hook para el contador
+ 
 
     const [contador, setContador] = useState(initial);
-//En contador se guarda el valor de la variable que vamos a ir modificando con setContador, useState determina su valor original.
+    //Hook para el contador
+    //En contador se guarda el valor de la variable que vamos a ir modificando con setContador, useState determina su valor original.
    
 
-const addItem = () => {
+const sumItem = () => {
     const newValue = contador + 1;
        
     if (newValue < stock){
@@ -36,7 +34,6 @@ const quitItem = () => {
 
 
 
-
     const onAdd =()=>{
         const message1 = `${contador} producto agregado carro`;
         const message2 = `${contador}  productos agregados al carro`;
@@ -51,7 +48,7 @@ const quitItem = () => {
         <div>
             
             <div>
-                <button onClick={addItem} className="botonesCarro">+</button>
+                <button onClick={sumItem} className="botonesCarro">+</button>
                 
                 <button onClick={quitItem} className="botonesCarro">-</button>
                 
