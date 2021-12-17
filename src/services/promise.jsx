@@ -1,7 +1,7 @@
 const data = [{
     "id" : 1,
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiZ6FVxAoMK8q8qtUl2sTg2rzJg0_CZac_wg&usqp=CAU",
     "name": "Funda Samsung A52",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiZ6FVxAoMK8q8qtUl2sTg2rzJg0_CZac_wg&usqp=CAU",
     "price": " $ 800",
     "stock": 10,
     "category": "Fundas",

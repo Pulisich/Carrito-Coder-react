@@ -14,7 +14,7 @@ const Cart = () =>{
     <div>
 
         <h1>Carrito</h1>
-        {
+       <div> {
             
             products.map((product)=>{
                 <div key={product.id}>
@@ -23,9 +23,12 @@ const Cart = () =>{
                     <h2>{product.quantity}</h2>
                 </div>
             })
+            
         }
-        <button>Quitar item</button>
-        <button>Limpiar carro</button>
+                <button onClick={console.log("Removido el item")}>Quitar item</button>
+
+        </div>
+        <button onClick={console.log("Limpio el carro")}>Limpiar carro</button>
     </div>    
         
     )
