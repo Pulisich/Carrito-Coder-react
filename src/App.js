@@ -3,7 +3,7 @@ import  NavBar from './components/navbar/navbar';
 import ItemListContainer from './components/ItemListContainer/itemListContainer';
 import {Route, Routes} from 'react-router-dom'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { CartContextProvider } from './contexts/CartContext';
+import { CartProvider } from './contexts/CartContext';
 import Cart from './components/Cart/Cart';
 import Home from './Home';
 
@@ -13,7 +13,7 @@ function App() {
 
     <div className="App">
       
-      <CartContextProvider>
+      <CartProvider>
       
         <NavBar />
 
@@ -35,7 +35,7 @@ function App() {
 
         </Routes>
       
-      </CartContextProvider>
+      </CartProvider>
     
     </div>
   );

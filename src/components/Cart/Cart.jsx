@@ -3,26 +3,29 @@ import { CartContext } from '../../contexts/CartContext'
 
 const Cart = () =>{
 
-    const { items, addItem } = useContext(CartContext);
+    const { products, total} = useContext(CartContext);
 
-    console.log("Los items", items);
+    console.log("Productos en carro", products);
+    console.log ("El total es de: ", total)
 
-
+    
     return(
     
     <div>
 
         <h1>Carrito</h1>
         {
-            items.map((item)=>{
-                <div key={item.id}>
+            
+            products.map((product)=>{
+                <div key={product.id}>
 
-                    <h1>{item.name}</h1>
-
+                    <h1>{product.name}</h1>
+                    <h2>{product.quantity}</h2>
                 </div>
             })
         }
-        
+        <button>Quitar item</button>
+        <button>Limpiar carro</button>
     </div>    
         
     )

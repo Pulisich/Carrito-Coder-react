@@ -9,7 +9,7 @@ const ItemDetail = (props) =>{
     const{ name, price, img, category, stock, description} = props.item;
     //ItemDetail recibe por props todo lo relativo a los items del array que después lo uso para renderizar.
 
-    const {addItem} = useContext(CartContext);
+    const {addItem, total} = useContext(CartContext);
 
     return(
         <Fragment>
@@ -21,7 +21,7 @@ const ItemDetail = (props) =>{
             <h3>Stock: {stock}</h3>
             <h4>{category}</h4>
           
-            <ItemCount item={item} stock={stock} initial={1} onAdd={addItem}/>
+            <ItemCount product={props} total={total} addItem={addItem} stock={stock} initial={1}/>
           
             
             <button type="button" className="botonesCarro"> <Link to="/cart" element={<Cart/>}> Ver carro</Link></button>

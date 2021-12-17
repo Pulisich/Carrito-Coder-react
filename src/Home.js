@@ -1,13 +1,13 @@
 import './App.css';
 import TitleComponent from './components/title/title'
-import { CartContextProvider } from './contexts/CartContext';
+import { CartProvider } from './contexts/CartContext';
 function Home() {
 
   return (
 
     <div className="App">
       
-      <CartContextProvider>
+      <CartProvider>
       
         
 
@@ -15,7 +15,7 @@ function Home() {
 
       
       
-      </CartContextProvider>
+      </CartProvider>
     
     </div>
   );
