@@ -3,11 +3,11 @@ import { CartContext } from '../../contexts/CartContext'
 
 const Cart = () =>{
 
-    const { products, total} = useContext(CartContext);
+    const { products, total, clearCart} = useContext(CartContext);
 
     console.log("Productos en carro", products);
-    console.log ("El total es de: ", total)
-
+    // console.log ("El total es de: ", total)
+    
     
     return(
     
@@ -25,10 +25,12 @@ const Cart = () =>{
             })
             
         }
-                <button onClick={console.log("Removido el item")}>Quitar item</button>
+        
+        {/* <button onClick={console.log("Removido el item")}>Quitar item</button> */}
 
         </div>
-        <button onClick={console.log("Limpio el carro")}>Limpiar carro</button>
+        
+        <button onClick={clearCart}>Limpiar carro</button>
     </div>    
         
     )

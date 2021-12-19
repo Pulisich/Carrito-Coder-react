@@ -56,7 +56,7 @@ const quitItem = () => {
                 
                 <h3>{quantity}</h3>
 
-                <button onClick={()=>addItem(product,price, quantity)} className="botonesCarro">Agregar al carro</button>
+                <button onClick={()=>addItem(product, quantity)} className="botonesCarro">Agregar al carro</button>
             </div>
 
         </div>

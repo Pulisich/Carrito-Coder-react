@@ -6,7 +6,7 @@ import Cart from '../Cart/Cart';
 import { CartContext } from '../../contexts/CartContext';
 
 const ItemDetail = (props) =>{
-    const{ name, price, img, category, stock, description} = props.item;
+    const{ name, price, img, category, stock, description, quantity} = props.item;
     //ItemDetail recibe por props todo lo relativo a los items del array que después lo uso para renderizar.
 
     const {addItem, total} = useContext(CartContext);
@@ -21,7 +21,7 @@ const ItemDetail = (props) =>{
             <h3>Stock: {stock}</h3>
             <h4>{category}</h4>
           
-            <ItemCount product={props} total={total} addItem={addItem} stock={stock} initial={1}/>
+            <ItemCount product={props} total={total} quantity={quantity} addItem={addItem} stock={stock}  initial={1}/>
           
             
             <button type="button" className="botonesCarro"> <Link to="/cart" element={<Cart/>}> Ver carro</Link></button>
