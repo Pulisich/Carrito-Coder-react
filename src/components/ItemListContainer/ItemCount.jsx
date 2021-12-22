@@ -1,6 +1,6 @@
 import {  useState } from "react"
 
-const ItemCount =({addItem, product , stock, initial, price, total})=>{
+const ItemCount =({addItem, product , stock, initial})=>{
 
  //La suma debe ser siempre menor o igual que el stock
  //La resta no puede ser menor que initial que es 1

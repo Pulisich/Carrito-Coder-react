@@ -25,7 +25,7 @@ const ItemDetailContainer = ()=>{
         }).catch(err => alert("El problema es: ", err))
     }    , [id])   
 
-//Con ésto le digo que obenga los productos.
+//Con ésto le digo que obtenga los productos.
 //Una vez esto hecho, le pido que me encuentre los productos de acuerdo a su id.
 
     return (
