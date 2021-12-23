@@ -54,3 +54,8 @@ Link{
 Link :visited{
   text-decoration: none;
 }
+
+.itemsCart{
+  background-color: rgb(253, 253, 91);
+  border-radius: 25px;
+}
