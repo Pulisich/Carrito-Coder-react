@@ -1,5 +1,8 @@
 import { Fragment, React, useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
+import {Link} from 'react-router-dom'
+import ItemListContainer from '../ItemListContainer/itemListContainer';
+
 
 const Cart = () => {
 
@@ -16,18 +19,33 @@ const Cart = () => {
   }
 
   return (
-
+//Si no hay productos renderiza este mensaje "agresivo" caso contrario renderiza el carro
     <div>
-
-      <h1>Items en carro: {products.length}</h1>
+      {
+        products.length===0 && (
+          <div>
+            
+            <h1>Tu carro está vacío</h1>
+           
+            <h2><Link to="/" element={<ItemListContainer/>}>¡Comprá cosas!¡Gastá dinero!</Link></h2> 
+          
+          </div>
+          
+        )
+      }
+      
+      {
+        products.length >= 1 && (
+          <div>
+            <h1>Items en carro: {products.length}</h1>
       <div>
         {products.map((product) => {
           return (
-            <div>
+            <div key={product.id}>
 
 
               <Fragment  >
-                <div key={product.item.index}>
+                <div >
                   <h1>{product.item.name}</h1>
 
                   <p>Precio por unidad: $ {product.item.price}</p>
@@ -50,6 +68,10 @@ const Cart = () => {
         })}
         <h1>Precio final: ${finalPrice} </h1>
       </div>
+          </div>
+        )
+      }
+      
       <button>Finalizar compra</button>
       <button onClick={clearCart}>Limpiar carro</button>
     </div>

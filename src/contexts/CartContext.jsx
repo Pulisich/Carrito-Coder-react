@@ -19,7 +19,7 @@ export function CartProvider({ children }) {
     } else {
         alert("Productos agregados al carro")
     };
-        isInCart(product.item.id)
+        isInCart(product.item.id) //Acá me chequea si el tiem está, no lo toques, solo actualizá la cantidad.
         ?
         setProducts(products.map((prod)=>{
             if(prod.id === product.item.id){
@@ -35,7 +35,7 @@ export function CartProvider({ children }) {
     setTotal(products.length + 1)
    
     };
-
+    // Función que busca los duplicados
     const isInCart = (id) => {
         const existe = products.find((product) => product.item.id === id);
       

@@ -29,10 +29,10 @@ function Home() {
       </CartProvider>
     
       <h1> ¡Novedades! </h1>
-      <p>No tenemos fundas para el Iphone 13, dejen de preguntar</p>
-      <p>Tampoco vendemos fundas SmartWatch</p>
-      <img src='./assets/klavkalash.jpg' alt="No iPhone 13 solo KlavKalash" />
-
+      <p>Tenemos fundas para el Iphone 13, dejen de preguntar</p>
+      <p>También vendemos fundas SmartWatch</p>
+      <p>Serán cargadas eventualmente en la sección de productos</p>
+        
     </div>
   );
 

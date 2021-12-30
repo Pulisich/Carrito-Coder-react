@@ -50,13 +50,13 @@ const quitItem = () => {
         <div>
             
             <div>
-                <button onClick={sumItem} className="botonesCarro">+</button>
+                <button onClick={sumItem} className="botonesCount">+</button>
                 
-                <button onClick={quitItem} className="botonesCarro">-</button>
+                <button onClick={quitItem} className="botonesCount">-</button>
                 
                 <h3>{quantity}</h3>
 
-                <button onClick={()=>addItem(product, quantity)} className="botonesCarro">Agregar al carro</button>
+                <button onClick={()=>addItem(product, quantity)} className="botonesCount">Agregar al carro</button>
             </div>
 
         </div>

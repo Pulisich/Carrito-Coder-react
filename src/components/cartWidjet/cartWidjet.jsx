@@ -6,11 +6,11 @@ const CartWidjet = () => {
 
         const {products} = useContext(CartContext);
         let itemsInCart= products.length;
-        
+        //Solo se va a renderizar si hay un producto en el cart
     
         return ( 
                 <Fragment>
-                        <div className="itemsCart">{itemsInCart}</div>
+                        <div className="itemsCart">{products.length >=1 && (itemsInCart)}</div> 
                         <ShoppingCartIcon />
                 </Fragment>        
                          
