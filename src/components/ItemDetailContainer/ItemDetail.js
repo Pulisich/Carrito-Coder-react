@@ -9,7 +9,7 @@ import { CartContext } from '../../contexts/CartContext';
 const ItemDetail = (props) =>{
     const{ name, price, img, category, stock, description, quantity} = props.item;
     //ItemDetail recibe por props todo lo relativo a los items del array que después lo uso para renderizar.
-
+    console.log("El Item ah re loco", props)
     const {addItem, total} = useContext(CartContext);
 
     return(

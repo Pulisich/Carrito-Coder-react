@@ -91,7 +91,7 @@ const data = [{
     "price":  3500,
     "stock": 5,
     "category": "Auriculares",
-    "description":"Auriculares inalámbricos Bluetoog. Origen: China."
+    "description":"Auriculares inalámbricos Bluetooth. Origen: China."
 
 
 },

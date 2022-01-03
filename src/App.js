@@ -6,15 +6,44 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/Cart/Cart';
 import Home from './Home';
-
+// import { useEffect, useState } from 'react';
+// import {collection,  getDocs, getFirestore} from 'firebase/firestore'
 function App() {
 
+// const [products,setProducts]= useState(null)
+// useEffect(()=>{
+//     const db = getFirestore();
+
+//     const productRef =doc(db, "items",  "Ks8peQXCffgnqzNyuLnw" )
+//     getDoc(productRef).then(snapshot => {
+//       if(snapshot.exists()){
+//       setProducts({ ...snapshot.data(), id: snapshot.id });
+
+//     }
+//     console.log (products)})
+
+// },[])
+
+// const [products, setProducts] = useState (null)
+
+// useEffect(()=>{
+
+//   const db= getFirestore();
+
+//   const itemCollection = collection(db, "items");
+
+//   getDocs(itemCollection).then((snapshot)=>{
+//     setProducts(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
+//     console.log(products)
+//   });
+
+// }, []);
   return (
 
     <div className="App">
-      
+
       <CartProvider>
-      
+
         <NavBar />
 
 
@@ -23,7 +52,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="item/:id" element={<ItemDetailContainer />} />
           <Route path="/category/:category" element={<ItemListContainer />} />
-          {/* //Acá le pasamos los Params a usar para cada ruta, 
+          {/* //Acá le pasamos los Params a usar para cada ruta,
          como cada item en el array tiene un parámetro distinto podemos
           usar dichos parámetros para filtrarlos combinando useParams con filter.
           Por ejemplo, si el item tiene de id: 4, el link item/4 me llevará al detail con ese item */}
@@ -34,9 +63,9 @@ function App() {
 
 
         </Routes>
-      
+
       </CartProvider>
-    
+
     </div>
   );
 

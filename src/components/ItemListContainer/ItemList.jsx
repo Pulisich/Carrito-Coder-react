@@ -1,4 +1,6 @@
 import Item from "./Item"
+// import {collection,  getDocs, getFirestore} from 'firebase/firestore'
+
 
 const ItemList = ({products}) =>{
 
