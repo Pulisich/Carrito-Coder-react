@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 // import getProducts from "../../services/promise"
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
@@ -17,10 +17,10 @@ const ItemDetailContainer = () => {
 
         const db = getFirestore();
 
-        const itemCollection = collection(db, "items");
+        const itemRef = doc(db, "items", id);
 
-        getDocs(itemCollection).then((snapshot) => {
-            setItem(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+        getDoc(itemRef).then((snapshot) => {
+            setItem({ id: snapshot.id, ...snapshot.data() })
             
         })
         
