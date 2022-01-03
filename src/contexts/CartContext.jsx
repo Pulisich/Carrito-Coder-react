@@ -54,7 +54,7 @@ export function CartProvider({ children }) {
     //función para remover un item
      const removeItem = (id) => {
        
-        const deleted = products.filter((product) => product.item.id !== parseInt(id));
+        const deleted = products.filter((product) => product.item.id !== id);
         
         setProducts(deleted);
         setTotal(products.length - 1);
