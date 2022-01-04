@@ -34,6 +34,8 @@ function Home() {
       <p>Serán cargadas eventualmente en la sección de productos</p>
         
     </div>
+
+    
   );
 
 }

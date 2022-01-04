@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/Cart/Cart';
 import Home from './Home';
+import FooterCool from './components/title/footer';
 
 
 function App() {
@@ -36,9 +37,10 @@ function App() {
 
 
         </Routes>
-
+          
       </CartProvider>
 
+      <FooterCool/>
     </div>
   );
 

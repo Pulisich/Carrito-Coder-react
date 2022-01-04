@@ -56,7 +56,7 @@ const Cart = () => {
        batch.update(itemRef, {stock: product.item.stock - product.quantity});
      })
      batch.commit();
-     setTimeout(()=>clearCart(), 500) ;
+     setTimeout(()=>clearCart(), 3000) ;
   }
 
   return (
