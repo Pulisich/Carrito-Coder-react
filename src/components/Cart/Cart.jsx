@@ -1,8 +1,9 @@
-import { Fragment, React, useContext } from 'react'
+import { Fragment, React, useContext} from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import { Link } from 'react-router-dom'
 import ItemListContainer from '../ItemListContainer/itemListContainer';
-import { useState } from 'react';
+import {  addDoc, collection, getFirestore } from 'firebase/firestore'
+import { useForm } from "react-hook-form";
 
 
 const Cart = () => {
@@ -21,7 +22,33 @@ const Cart = () => {
 
   console.log("El precio final es de: $", finalPrice)
 
-  const [formValues, setFormValues] = useState({})
+  
+ 
+  const {register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    sendOrder(data);
+    reset()
+  };
+  const sendOrder = (data) =>{
+    const order = {
+      buyer:{
+        name: data.name,
+        lastname: data.lastname ,
+        email: data.email ,
+        cellphone: data.cellphone,
+        address: data.address      
+      },
+
+      items: products,
+      total: finalPrice,
+    }
+
+    const db = getFirestore();
+    const ordersCollection= collection(db, "orders");
+
+    addDoc(ordersCollection, order).then(({id})=>console.log("Id de compra:",id))
+
+  }
 
   return (
     //Si no hay productos renderiza este mensaje "agresivo" caso contrario renderiza el carro
@@ -85,13 +112,14 @@ const Cart = () => {
         (
           <div>
             <h1>Datos de Compra</h1>
-            <form className='formularioCarro' action="">
-              <input type="text" name='name' placeholder='Nombre' required />
-              <input type="text" name='lastname' placeholder='Apellido' required />
-              <input type="number" name='cellphone' placeholder='Teléfono' required />
-              <input type="email" name='email' placeholder='Email' required />
-              <input type="text" name='address' placeholder='Dirección' required />
-              <input type="submit" value='Finalizar' />
+            <form className='formularioCarro'  onSubmit={handleSubmit(onSubmit)}>
+          
+               <input type="text" {...register("name")}name='name' placeholder='Nombre' required />
+              <input type="text"{...register("lastname")} name='lastname' placeholder='Apellido' required />
+              <input type="number" {...register("cellphone")}name='cellphone'  placeholder='Teléfono' required />
+              <input type="email" {...register("email")}name='email'  placeholder='Email' required />
+              <input type="text" {...register("address")}name='address' placeholder='Dirección' required /> 
+              <input type="submit" value='Finalizar'   />
             </form>
 
           </div>
