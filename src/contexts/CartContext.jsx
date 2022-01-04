@@ -65,13 +65,17 @@ export function CartProvider({ children }) {
 
 
       
+ //Función para hacer aparecer el formulario
+ const [compra, setCompra] = useState(false)
 
-
+ const formulario = ()=>{
+    setCompra(true)
+ }
     
     
 
     return (
-        <CartContext.Provider value={{ products, addItem, total, clearCart, isInCart, removeItem }}>
+        <CartContext.Provider value={{ products, addItem, total, clearCart, isInCart, removeItem, compra, formulario }}>
             {children}
         </CartContext.Provider>
     );

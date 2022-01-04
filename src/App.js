@@ -6,38 +6,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/Cart/Cart';
 import Home from './Home';
-// import { useEffect, useState } from 'react';
-// import {collection,  getDocs, getFirestore} from 'firebase/firestore'
+
+
 function App() {
 
-// const [products,setProducts]= useState(null)
-// useEffect(()=>{
-//     const db = getFirestore();
 
-//     const productRef =doc(db, "items",  "Ks8peQXCffgnqzNyuLnw" )
-//     getDoc(productRef).then(snapshot => {
-//       if(snapshot.exists()){
-//       setProducts({ ...snapshot.data(), id: snapshot.id });
-
-//     }
-//     console.log (products)})
-
-// },[])
-
-// const [products, setProducts] = useState (null)
-
-// useEffect(()=>{
-
-//   const db= getFirestore();
-
-//   const itemCollection = collection(db, "items");
-
-//   getDocs(itemCollection).then((snapshot)=>{
-//     setProducts(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
-//     console.log(products)
-//   });
-
-// }, []);
   return (
 
     <div className="App">

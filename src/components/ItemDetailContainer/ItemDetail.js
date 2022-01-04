@@ -1,35 +1,42 @@
-import {Fragment, useContext} from 'react'
+import { Fragment, useContext } from 'react'
 import ItemCount from '../ItemListContainer/ItemCount'
 import ItemListContainer from '../ItemListContainer/itemListContainer';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Cart from '../Cart/Cart';
 import { CartContext } from '../../contexts/CartContext';
 
 
-const ItemDetail = (props) =>{
-    const{ name, price, img, category, stock, description, quantity} = props.item;
+const ItemDetail = (props) => {
+    const { name, price, img, category, stock, description, quantity } = props.item;
     //ItemDetail recibe por props todo lo relativo a los items del array que después lo uso para renderizar.
-    console.log("El Item ah re loco", props)
-    const {addItem, total} = useContext(CartContext);
+    const { addItem, total } = useContext(CartContext);
 
-    return(
+    return (
         <Fragment>
-        <div>
-            <h1>{name}</h1> 
-            <img src={img} alt="Foto Producto"></img>
-            <h2>{description}</h2>
-            <h2>{price}</h2>
-            <h3>Stock: {stock}</h3>
-            <h4>{category}</h4>
-          
-            <ItemCount product={props} total={total} quantity={quantity} addItem={addItem} stock={stock}  initial={1}/>
-          
-            
-            <button type="button" className="botonesCarro"> <Link to="/cart"  element={<Cart/>}> Ver carro</Link></button>
-            <button type="button" className="botonesCarro"><Link to="/" element={<ItemListContainer/>}>Volver</Link></button>
-           
+            <div>
+                {stock === 0 && (
+                    <h1>AGOTADO</h1>
+                )}
+                {stock > 0 &&(
+                    <div>
+                        <h1>{name}</h1>
+                        <img src={img} alt="Foto Producto"></img>
+                        <h2>{description}</h2>
+                        <h2>{price}</h2>
+                        <h3>Stock: {stock}</h3>
+                        <h4>{category}</h4>
+                    </div>
+                )
+                }
 
-        </div>
+                <ItemCount product={props} total={total} quantity={quantity} addItem={addItem} stock={stock} initial={1} />
+
+
+                <button type="button" className="botonesCarro"> <Link to="/cart" element={<Cart />}> Ver carro</Link></button>
+                <button type="button" className="botonesCarro"><Link to="/" element={<ItemListContainer />}>Volver</Link></button>
+
+
+            </div>
         </Fragment>
     )
 }
