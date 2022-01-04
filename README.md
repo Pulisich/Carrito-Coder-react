@@ -1,6 +1,6 @@
 # Proyecto Final Coderhouse-React JS!
 
-¡Hola! Bienvenido a mi proyecto final del curso de  **React JS** de Coderhouse. Aquí podrás ver el código de mi e-commerce, que fue lo que elegí como proyecto final. También puedes verlo desplegado aquí: **file explorer** o.
+¡Hola! Bienvenido a mi proyecto final del curso de  **React JS** de Coderhouse. Aquí podrás ver el código de mi e-commerce, que fue lo que elegí como proyecto final. También puedes verlo desplegado aquí: **https://react-carro-coder.herokuapp.com/**.
 
 
 # Contenido
