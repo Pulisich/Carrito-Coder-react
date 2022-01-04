@@ -2,7 +2,7 @@ import { Fragment, React, useContext} from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import { Link } from 'react-router-dom'
 import ItemListContainer from '../ItemListContainer/itemListContainer';
-import {  addDoc, collection, getFirestore } from 'firebase/firestore'
+import {  addDoc, collection, doc, getFirestore, writeBatch } from 'firebase/firestore'
 import { useForm } from "react-hook-form";
 
 
@@ -27,7 +27,8 @@ const Cart = () => {
   const {register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     sendOrder(data);
-    reset()
+    reset();
+   
   };
   const sendOrder = (data) =>{
     const order = {
@@ -46,8 +47,16 @@ const Cart = () => {
     const db = getFirestore();
     const ordersCollection= collection(db, "orders");
 
-    addDoc(ordersCollection, order).then(({id})=>console.log("Id de compra:",id))
-
+    addDoc(ordersCollection, order).then(({id})=>{console.log("Id de compra:",id);
+  alert("Gracias por su compra ", id)})
+    
+     const batch = writeBatch(db);
+     products.forEach((product)=> {
+       const itemRef = doc(db, "items", product.id);
+       batch.update(itemRef, {stock: product.item.stock - product.quantity});
+     })
+     batch.commit();
+     setTimeout(()=>clearCart(), 500) ;
   }
 
   return (
@@ -103,7 +112,7 @@ const Cart = () => {
           </div>
         )
       }
-
+      <button onClick={clearCart}>Limpiar carro</button>
       <button onClick={formulario}>Finalizar compra</button>
 
       {
@@ -119,13 +128,13 @@ const Cart = () => {
               <input type="number" {...register("cellphone")}name='cellphone'  placeholder='Teléfono' required />
               <input type="email" {...register("email")}name='email'  placeholder='Email' required />
               <input type="text" {...register("address")}name='address' placeholder='Dirección' required /> 
-              <input type="submit" value='Finalizar'   />
+              <input type="submit" value='Finalizar'   className='submitCart' />
             </form>
 
           </div>
         )
       }
-      <button onClick={clearCart}>Limpiar carro</button>
+      
     </div>
 
   )

@@ -15,7 +15,7 @@ const ItemDetail = (props) => {
         <Fragment>
             <div>
                 {stock === 0 && (
-                    <h1>AGOTADO</h1>
+                    <h1 className='agotado'>AGOTADO</h1>
                 )}
                 {stock > 0 &&(
                     <div>

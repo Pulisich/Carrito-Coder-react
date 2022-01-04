@@ -13,7 +13,7 @@ import Home from '../../Home';
 export default function NavBar() {
   
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="static">
         
         <Toolbar>
@@ -29,19 +29,12 @@ export default function NavBar() {
            
           </Button> 
           
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} className="title">
+          <Typography variant="h4" component="div"  className="title">
           
             CityPhone
           
           </Typography>
-          {/* <select name="Productos">
-            <option>Fundas</option>
-            <option>Fundas</option>
-            <option>Fundas</option>
-            <option>Fundas</option>
-            <option>Fundas</option>
-            <option>Fundas</option>
-          </select> */}
+         
           <Button color="inherit"><Link to="/home" element={<Home/>}>Home</Link> </Button>
           <Button color="inherit"><Link to="/" element={<ItemListContainer/>}>Productos</Link> </Button>
           <Button color="inherit"><Link to={`/category/Fundas`}>Fundas</Link></Button>
