@@ -41,6 +41,13 @@
 
 a{
   text-decoration: none;
+  color: wheat;
+
+}
+
+a :visited{
+  text-decoration: none;
+  color: rgb(250, 246, 239);
 }
 
 .botonesCarro{
